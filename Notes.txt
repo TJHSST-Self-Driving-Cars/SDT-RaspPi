@@ -1,0 +1,10 @@
+Dependencies:
+
+adafruit_rplidar
+
+
+
+Stuff:
+I am not sure how python is with threading and accessing variables from a class that is continuously update them
+Python shouldn't give me corrupt data because its python but you never know... because its python
+I also haven't tested any of this lol 
