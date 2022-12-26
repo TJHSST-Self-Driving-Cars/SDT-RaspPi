@@ -7,11 +7,7 @@ from adafruit_rplidar import RPLidar
 # once we get an imu, start updating the relative positions to be absolute positions in space where 0,0 is the position the car started at
 # add in a set of all of the points that have been hit by the lidar ever to start to create a map of the environment
 
-
-# used to scale data to fit on the screen
-max_distance = 0
-
-class LidarController:
+class Lidar:
 
     _PORT_NAME = None
     _lidar = None
@@ -89,9 +85,3 @@ class LidarController:
 
     def stop(self) -> None:
         self._lidarStopped = True
-
-
-
-
-    
-

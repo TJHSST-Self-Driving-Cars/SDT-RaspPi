@@ -1,10 +1,10 @@
 Hello there!
 
 Make sure to include this import statement at the top of your code:
-    from LidarController import LidarController
+    from Lidar import Lidar
 
-Create a new LidarController with:
-    lidar = LidarController()
+Create a new Lidar with:
+    lidar = Lidar()
 
 
 
