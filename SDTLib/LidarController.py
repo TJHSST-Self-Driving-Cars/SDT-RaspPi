@@ -32,9 +32,11 @@ class LidarController:
     curAngle = 0
 
 
-    def __init__(self):
+    def __init__(self, portname):
         # Setup the RPLidar
-        self._PORT_NAME = '/dev/ttyUSB0'; self._lidar = RPLidar(None, self._PORT_NAME)
+        self._PORT_NAME = portname
+        self._lidar = RPLidar(None, self._PORT_NAME)
+        
 
         # Setup the threading system
         self._scan_thread = threading.Thread(target=self._startScan, name="lidar scan")
@@ -91,7 +93,10 @@ class LidarController:
         self._lidarStopped = True
 
 
-
-
+if __name__ == "__main__":
+    portname = "/dev/serial0"
+    lidar = LidarController(portname)
+    lidar.start()
+    print(lidar.data)
     
 
