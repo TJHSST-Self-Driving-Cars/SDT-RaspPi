@@ -91,7 +91,7 @@ class Lidar:
 
 if __name__ == "__main__":
     portname = "/dev/serial0"
-    lidar = LidarController(portname)
+    lidar = Lidar(portname)
     lidar.start()
     print(lidar.data)
     

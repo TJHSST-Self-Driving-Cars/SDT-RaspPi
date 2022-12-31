@@ -275,9 +275,11 @@ class RPLidar:
         """Reads response packet with length of `dsize` bytes"""
         self.log("debug", "Trying to read response: %d bytes" % dsize)
         data = self._serial_port.read(dsize)
+        
         self.log_bytes("debug", "Received data:", data)
-        if len(data) != dsize:
-            raise RPLidarException("Wrong body size")
+        print(f"data received to the lidar: {data}; expected data size: {dsize}")
+        # if len(data) != dsize:
+        #     raise RPLidarException("Wrong body size")
         return data
 
     @property
